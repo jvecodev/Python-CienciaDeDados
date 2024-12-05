@@ -124,6 +124,8 @@ print('--------------------------------')
 for i in range(len(itens) - 1, -1, -1 ): 
     print(f"{i}: {itens[i]}")
 
+#algumas atualizacoes
+
 
 
  
