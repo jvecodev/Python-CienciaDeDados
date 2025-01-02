@@ -23,10 +23,6 @@ post = site.find('div', attrs = {'class': 'feed-post-body'})
 
 title = post.find('a', attrs = {'class': 'feed-post-link'})
 
-# dest meneira imprimimos o texto junto com a tag completa 
-
-print(title)
-
 # dessa maneira imprimimos apenas o texto
 print(' =v= '* 10)
 
@@ -35,10 +31,14 @@ print(title.text)
 print(' =v= '* 10)
 # print(post.prettify())
 
-#subtitle 
 
+# neste exemnplo de post a globo optou por nao colocar um subtitle 
+#subtitle 
 subtitulo = post.find('div', attrs = {'class': 'feed-post-body-resumo'})
 
-print(subtitulo.text)
+if subtitulo is None:
+    print('Nao tem subtitulo')
+else:
+    print(subtitulo.text)
 
  
